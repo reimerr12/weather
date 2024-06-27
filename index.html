@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="bg-gray-900 h-[100svh] flex items-center justify-center">
+     <div class=" w-[300px] md:w-[500px] h-[min-content] rounded-xl border-4 border-cyan-400 bg-cyan-400 p-4 flex flex-col items-center justify-center gap-2" id="container">
+        <div class="" id="header">
+            <div id="searchbox" class="w-full gap-3 flex justify-between">
+                <input type="text" placeholder="Enter a Location" class="px-4 py-2 capitalize outline-none border-none rounded-3xl text-black font-bold placeholder:text-black" id="input-box">
+
+                <button id="button" class="">
+                    <i class="fa-solid fa-magnifying-glass p-4 bg-white rounded-full text-cyan-400 hover:text-cyan-400 hover:bg-black ease-in-out duration-150 font-bold cursor-pointer"></i>
+                </button>
+            </div>
+        </div>
+
+        
+        <div id="weatherbody" class="hidden items-center flex-col my-5">
+            <img class="w-[60%]" id="weather-image" src="images/cloud.png" alt="">
+            <div id="weather-box" class="m-4 text-center">
+                <p id="temperature" class="text-3xl font-bold relative">0 <sup class="">°C</sup></p>
+                <p id="description" class="text-2xl font-bold capitalize">Light Rain</p>
+            </div>
+
+
+            <div id="weather-descriptions" class="w-full flex items-center justify-between ">
+                <div id="humidity" class="mx-2 text-center">
+                    <i class="fa-solid fa-droplet text-3xl font-bold"></i>
+                    <div id="text1">
+                        <span id="percentagehumidity" class="font-bold text-xl">45%</span>
+                        <p class="text-xl font-bold capitalize">Humidity</p>
+                    </div>
+                </div>
+
+                <div id="windspeed" class="mx-2 text-center">
+                    <i class="fa-solid fa-wind text-3xl font-bold"></i>
+                    <div id="text2">
+                        <span id="windvelocity" class="font-bold text-xl">12Km/H</span>
+                        <p class="text-xl font-bold capitalize">windspeed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="locationerror" class="mt-4 hidden flex-col justify-center items-center"><h1 class="text-2xl font-bold capitalize">we could not find the location !!!</h1>
+            <img class="w-[80%]" src="images/404.png" alt=""></div>
+     </div>
+
+
+    <script src="https://kit.fontawesome.com/df9783ea42.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
